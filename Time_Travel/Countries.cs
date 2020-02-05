@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Time_Travel
 {
-    public class Country
+    public class Country : IComparable<Country>
     {
         public enum Zone {Africa, Asia, Europe, Latin_America_and_Carribean, Oceania, North_America }
 
@@ -31,6 +31,74 @@ namespace Time_Travel
         public int CompareTo(Country other)
         {
             return Name.CompareTo(other.Name);
+        }
+    }
+
+
+    //Subclasses of each zone in the world
+    public class AfricanCountry : Country
+    {
+        public AfricanCountry(string name, Zone countryzone) : base(name, countryzone)
+        {
+        }
+        public override string ToString()
+        {
+            return $"{Name} - Africa";
+        }
+    }
+
+    public class AsianCountry : Country
+    {
+        public AsianCountry(string name, Zone countryzone) : base(name, countryzone)
+        {
+        }
+        public override string ToString()
+        {
+            return $"{Name} - Asia";
+        }
+    }
+
+    public class EuropeanCountry : Country
+    {
+        public EuropeanCountry(string name, Zone countryzone) : base(name, countryzone)
+        {
+        }
+        public override string ToString()
+        {
+            return $"{Name} - Europe";
+        }
+    }
+
+    public class LatinCaribbeanCountry : Country
+    {
+        public LatinCaribbeanCountry(string name, Zone countryzone) : base(name, countryzone)
+        {
+        }
+        public override string ToString()
+        {
+            return $"{Name} - Latin America & Caribbean";
+        }
+    }
+
+    public class OceanicCountry : Country
+    {
+        public OceanicCountry(string name, Zone countryzone) : base(name, countryzone)
+        {
+        }
+        public override string ToString()
+        {
+            return $"{Name} - Oceanic";
+        }
+    }
+
+    public class NorthAmericanCountry : Country
+    {
+        public NorthAmericanCountry(string name, Zone countryzone) : base(name, countryzone)
+        {
+        }
+        public override string ToString()
+        {
+            return $"{Name} - North America";
         }
     }
 }
