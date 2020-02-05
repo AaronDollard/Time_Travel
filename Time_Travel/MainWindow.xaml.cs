@@ -32,9 +32,9 @@ namespace Time_Travel
             Country africa1 = new Country("Nigeria", Country.Zone.Africa);
             Country africa2 = new Country("Ethiopia", Country.Zone.Africa);
             Country africa3 = new Country("Egypt", Country.Zone.Africa);
-            Country africa4 = new Country("DRCongo", Country.Zone.Africa);
+            Country africa4 = new Country("Democratic Republic Of Congo", Country.Zone.Africa);
             Country africa5 = new Country("Tanzania", Country.Zone.Africa);
-            Country africa6 = new Country("SouthAfrica", Country.Zone.Africa);
+            Country africa6 = new Country("South Africa", Country.Zone.Africa);
             Country africa7 = new Country("Kenya", Country.Zone.Africa);
             Country africa8 = new Country("Uganda", Country.Zone.Africa);
             Country africa9 = new Country("Algeria", Country.Zone.Africa);
@@ -45,9 +45,9 @@ namespace Time_Travel
             Country africa14 = new Country("Ghana", Country.Zone.Africa);
             Country africa15 = new Country("Madagascar", Country.Zone.Africa);
             Country africa16 = new Country("Cameroon", Country.Zone.Africa);
-            Country africa17 = new Country("Côted'Ivoire", Country.Zone.Africa);
+            Country africa17 = new Country("Côte d'Ivoire", Country.Zone.Africa);
             Country africa18 = new Country("Niger", Country.Zone.Africa);
-            Country africa19 = new Country("BurkinaFaso", Country.Zone.Africa);
+            Country africa19 = new Country("Burkina Faso", Country.Zone.Africa);
             Country africa20 = new Country("Mali", Country.Zone.Africa);
             Country africa21 = new Country("Malawi", Country.Zone.Africa);
             Country africa22 = new Country("Zambia", Country.Zone.Africa);
@@ -60,13 +60,13 @@ namespace Time_Travel
             Country africa29 = new Country("Benin", Country.Zone.Africa);
             Country africa30 = new Country("Burundi", Country.Zone.Africa);
             Country africa31 = new Country("Tunisia", Country.Zone.Africa);
-            Country africa32 = new Country("SouthSudan", Country.Zone.Africa);
+            Country africa32 = new Country("South Sudan", Country.Zone.Africa);
             Country africa33 = new Country("Togo", Country.Zone.Africa);
-            Country africa34 = new Country("SierraLeone", Country.Zone.Africa);
+            Country africa34 = new Country("Sierra Leone", Country.Zone.Africa);
             Country africa35 = new Country("Libya", Country.Zone.Africa);
             Country africa36 = new Country("Congo", Country.Zone.Africa);
             Country africa37 = new Country("Liberia", Country.Zone.Africa);
-            Country africa38 = new Country("CentralAfricanRepublic", Country.Zone.Africa);
+            Country africa38 = new Country("Central African Republic", Country.Zone.Africa);
             Country africa39 = new Country("Mauritania", Country.Zone.Africa);
             Country africa40 = new Country("Eritrea", Country.Zone.Africa);
             Country africa41 = new Country("Namibia", Country.Zone.Africa);
@@ -75,13 +75,13 @@ namespace Time_Travel
             Country africa44 = new Country("Gabon", Country.Zone.Africa);
             Country africa45 = new Country("Lesotho", Country.Zone.Africa);
             Country africa46 = new Country("Guinea-Bissau", Country.Zone.Africa);
-            Country africa47 = new Country("EquatorialGuinea", Country.Zone.Africa);
+            Country africa47 = new Country("Equatorial Guinea", Country.Zone.Africa);
             Country africa48 = new Country("Mauritius", Country.Zone.Africa);
             Country africa49 = new Country("Eswatini", Country.Zone.Africa);
             Country africa50 = new Country("Djibouti", Country.Zone.Africa);
             Country africa51 = new Country("Comoros", Country.Zone.Africa);
-            Country africa52 = new Country("CaboVerde", Country.Zone.Africa);
-            Country africa53 = new Country("SaoTome&Principe", Country.Zone.Africa);
+            Country africa52 = new Country("Cabo Verde", Country.Zone.Africa);
+            Country africa53 = new Country("Sao Tom & Principe", Country.Zone.Africa);
             Country africa54 = new Country("Seychelles", Country.Zone.Africa);
             Country asia1 = new Country("China", Country.Zone.Asia);
             Country asia2 = new Country("India", Country.Zone.Asia);
@@ -95,22 +95,22 @@ namespace Time_Travel
             Country asia10 = new Country("Iran", Country.Zone.Asia);
             Country asia11 = new Country("Thailand", Country.Zone.Asia);
             Country asia12 = new Country("Myanmar", Country.Zone.Asia);
-            Country asia13 = new Country("SouthKorea", Country.Zone.Asia);
+            Country asia13 = new Country("South Korea", Country.Zone.Asia);
             Country asia14 = new Country("Iraq", Country.Zone.Asia);
             Country asia15 = new Country("Afghanistan", Country.Zone.Asia);
-            Country asia16 = new Country("SaudiArabia", Country.Zone.Asia);
+            Country asia16 = new Country("Saudi Arabia", Country.Zone.Asia);
             Country asia17 = new Country("Uzbekistan", Country.Zone.Asia);
             Country asia18 = new Country("Malaysia", Country.Zone.Asia);
             Country asia19 = new Country("Yemen", Country.Zone.Asia);
             Country asia20 = new Country("Nepal", Country.Zone.Asia);
-            Country asia21 = new Country("NorthKorea", Country.Zone.Asia);
-            Country asia22 = new Country("SriLanka", Country.Zone.Asia);
+            Country asia21 = new Country("North Korea", Country.Zone.Asia);
+            Country asia22 = new Country("Sri Lanka", Country.Zone.Asia);
             Country asia23 = new Country("Kazakhstan", Country.Zone.Asia);
             Country asia24 = new Country("Syria", Country.Zone.Asia);
             Country asia25 = new Country("Cambodia", Country.Zone.Asia);
             Country asia26 = new Country("Jordan", Country.Zone.Asia);
             Country asia27 = new Country("Azerbaijan", Country.Zone.Asia);
-            Country asia28 = new Country("UnitedArabEmirates", Country.Zone.Asia);
+            Country asia28 = new Country("United Arab Emirates", Country.Zone.Asia);
             Country asia29 = new Country("Tajikistan", Country.Zone.Asia);
             Country asia30 = new Country("Israel", Country.Zone.Asia);
             Country asia31 = new Country("Laos", Country.Zone.Asia);
@@ -119,7 +119,7 @@ namespace Time_Travel
             Country asia34 = new Country("Turkmenistan", Country.Zone.Asia);
             Country asia35 = new Country("Singapore", Country.Zone.Asia);
             Country asia36 = new Country("Oman", Country.Zone.Asia);
-            Country asia37 = new Country("StateofPalestine", Country.Zone.Asia);
+            Country asia37 = new Country("State of Palestine", Country.Zone.Asia);
             Country asia38 = new Country("Kuwait", Country.Zone.Asia);
             Country asia39 = new Country("Georgia", Country.Zone.Asia);
             Country asia40 = new Country("Mongolia", Country.Zone.Asia);
@@ -133,7 +133,7 @@ namespace Time_Travel
             Country asia48 = new Country("Brunei", Country.Zone.Asia);
             Country euro1 = new Country("Russia", Country.Zone.Europe);
             Country euro2 = new Country("Germany", Country.Zone.Europe);
-            Country euro3 = new Country("UnitedKingdom", Country.Zone.Europe);
+            Country euro3 = new Country("United Kingdom", Country.Zone.Europe);
             Country euro4 = new Country("France", Country.Zone.Europe);
             Country euro5 = new Country("Italy", Country.Zone.Europe);
             Country euro6 = new Country("Spain", Country.Zone.Europe);
@@ -142,7 +142,7 @@ namespace Time_Travel
             Country euro9 = new Country("Romania", Country.Zone.Europe);
             Country euro10 = new Country("Netherlands", Country.Zone.Europe);
             Country euro11 = new Country("Belgium", Country.Zone.Europe);
-            Country euro12 = new Country("CzechRepublic", Country.Zone.Europe);
+            Country euro12 = new Country("Czech Republic", Country.Zone.Europe);
             Country euro13 = new Country("Greece", Country.Zone.Europe);
             Country euro14 = new Country("Portugal", Country.Zone.Europe);
             Country euro15 = new Country("Sweden", Country.Zone.Europe);
@@ -159,10 +159,10 @@ namespace Time_Travel
             Country euro26 = new Country("Ireland", Country.Zone.Europe);
             Country euro27 = new Country("Croatia", Country.Zone.Europe);
             Country euro28 = new Country("Moldova", Country.Zone.Europe);
-            Country euro29 = new Country("BosniaandHerzegovina", Country.Zone.Europe);
+            Country euro29 = new Country("Bosnia and Herzegovina", Country.Zone.Europe);
             Country euro30 = new Country("Albania", Country.Zone.Europe);
             Country euro31 = new Country("Lithuania", Country.Zone.Europe);
-            Country euro32 = new Country("NorthMacedonia", Country.Zone.Europe);
+            Country euro32 = new Country("North Macedonia", Country.Zone.Europe);
             Country euro33 = new Country("Slovenia", Country.Zone.Europe);
             Country euro34 = new Country("Latvia", Country.Zone.Europe);
             Country euro35 = new Country("Estonia", Country.Zone.Europe);
@@ -174,7 +174,7 @@ namespace Time_Travel
             Country euro41 = new Country("Monaco", Country.Zone.Europe);
             Country euro42 = new Country("Liechtenstein", Country.Zone.Europe);
             Country euro43 = new Country("SanMarino", Country.Zone.Europe);
-            Country euro44 = new Country("HolySee", Country.Zone.Europe);
+            Country euro44 = new Country("Holy See", Country.Zone.Europe);
             Country laac1 = new Country("Brazil", Country.Zone.Latin_America_and_Carribean);
             Country laac2 = new Country("Mexico", Country.Zone.Latin_America_and_Carribean);
             Country laac3 = new Country("Colombia", Country.Zone.Latin_America_and_Carribean);
@@ -187,16 +187,16 @@ namespace Time_Travel
             Country laac10 = new Country("Bolivia", Country.Zone.Latin_America_and_Carribean);
             Country laac11 = new Country("Haiti", Country.Zone.Latin_America_and_Carribean);
             Country laac12 = new Country("Cuba", Country.Zone.Latin_America_and_Carribean);
-            Country laac13 = new Country("DominicanRepublic", Country.Zone.Latin_America_and_Carribean);
+            Country laac13 = new Country("Dominican Republic", Country.Zone.Latin_America_and_Carribean);
             Country laac14 = new Country("Honduras", Country.Zone.Latin_America_and_Carribean);
             Country laac15 = new Country("Paraguay", Country.Zone.Latin_America_and_Carribean);
             Country laac16 = new Country("Nicaragua", Country.Zone.Latin_America_and_Carribean);
-            Country laac17 = new Country("ElSalvador", Country.Zone.Latin_America_and_Carribean);
-            Country laac18 = new Country("CostaRica", Country.Zone.Latin_America_and_Carribean);
+            Country laac17 = new Country("El Salvador", Country.Zone.Latin_America_and_Carribean);
+            Country laac18 = new Country("Costa Rica", Country.Zone.Latin_America_and_Carribean);
             Country laac19 = new Country("Panama", Country.Zone.Latin_America_and_Carribean);
             Country laac20 = new Country("Uruguay", Country.Zone.Latin_America_and_Carribean);
             Country laac21 = new Country("Jamaica", Country.Zone.Latin_America_and_Carribean);
-            Country laac22 = new Country("TrinidadandTobago", Country.Zone.Latin_America_and_Carribean);
+            Country laac22 = new Country("Trinidad and Tobago", Country.Zone.Latin_America_and_Carribean);
             Country laac23 = new Country("Guyana", Country.Zone.Latin_America_and_Carribean);
             Country laac24 = new Country("Suriname", Country.Zone.Latin_America_and_Carribean);
             Country laac25 = new Country("Belize", Country.Zone.Latin_America_and_Carribean);
@@ -204,27 +204,28 @@ namespace Time_Travel
             Country laac27 = new Country("Barbados", Country.Zone.Latin_America_and_Carribean);
             Country laac28 = new Country("SaintLucia", Country.Zone.Latin_America_and_Carribean);
             Country laac29 = new Country("Grenada", Country.Zone.Latin_America_and_Carribean);
-            Country laac30 = new Country("St.Vincent&Grenadines", Country.Zone.Latin_America_and_Carribean);
-            Country laac31 = new Country("AntiguaandBarbuda", Country.Zone.Latin_America_and_Carribean);
+            Country laac30 = new Country("St .Vincent & Grenadines", Country.Zone.Latin_America_and_Carribean);
+            Country laac31 = new Country("Antiguaand Barbuda", Country.Zone.Latin_America_and_Carribean);
             Country laac32 = new Country("Dominica", Country.Zone.Latin_America_and_Carribean);
-            Country laac33 = new Country("SaintKitts&Nevis", Country.Zone.Latin_America_and_Carribean);
+            Country laac33 = new Country("Saint Kitts & Nevis", Country.Zone.Latin_America_and_Carribean);
             Country oceania1 = new Country("Australia", Country.Zone.Oceania);
-            Country oceania2 = new Country("PapuaNewGuinea", Country.Zone.Oceania);
-            Country oceania3 = new Country("NewZealand", Country.Zone.Oceania);
+            Country oceania2 = new Country("Papua New Guinea", Country.Zone.Oceania);
+            Country oceania3 = new Country("New Zealand", Country.Zone.Oceania);
             Country oceania4 = new Country("Fiji", Country.Zone.Oceania);
-            Country oceania5 = new Country("SolomonIslands", Country.Zone.Oceania);
+            Country oceania5 = new Country("Solomon Islands", Country.Zone.Oceania);
             Country oceania6 = new Country("Vanuatu", Country.Zone.Oceania);
             Country oceania7 = new Country("Samoa", Country.Zone.Oceania);
             Country oceania8 = new Country("Kiribati", Country.Zone.Oceania);
             Country oceania9 = new Country("Micronesia", Country.Zone.Oceania);
             Country oceania10 = new Country("Tonga", Country.Zone.Oceania);
-            Country oceania11 = new Country("MarshallIslands", Country.Zone.Oceania);
+            Country oceania11 = new Country("Marshall Islands", Country.Zone.Oceania);
             Country oceania12 = new Country("Palau", Country.Zone.Oceania);
             Country oceania13 = new Country("Tuvalu", Country.Zone.Oceania);
             Country oceania14 = new Country("Nauru", Country.Zone.Oceania);
-            Country northa1 = new Country("UnitedStates", Country.Zone.North_America);
+            Country northa1 = new Country("United States", Country.Zone.North_America);
             Country northa2 = new Country("Canada", Country.Zone.North_America);
 
+            
 
             allCountries.Add(africa1);
             allCountries.Add(africa2);
@@ -421,8 +422,8 @@ namespace Time_Travel
             allCountries.Add(oceania14);
             allCountries.Add(northa1);
             allCountries.Add(northa2);
-
-
+            //Sorts the names of the countries.
+            //allCountries.Sort();
             //Dsplay the countries
             list_bx_world_countries.ItemsSource = allCountries;
         }

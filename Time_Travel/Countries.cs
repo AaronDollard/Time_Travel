@@ -26,5 +26,11 @@ namespace Time_Travel
         {
             return $"{Name}";
         }
+
+        //Comapring the names of te countries to sort them by name
+        public int CompareTo(Country other)
+        {
+            return Name.CompareTo(other.Name);
+        }
     }
 }
