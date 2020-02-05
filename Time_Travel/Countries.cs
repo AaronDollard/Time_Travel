@@ -32,7 +32,8 @@ namespace Time_Travel
         {
             return Name.CompareTo(other.Name);
         }
-    }
+    }//End of the country class 
+
 
 
     //Subclasses of each zone in the world

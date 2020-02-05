@@ -205,7 +205,7 @@ namespace Time_Travel
             Country laac28 = new LatinCaribbeanCountry("Saint Lucia", Country.Zone.Latin_America_and_Carribean);
             Country laac29 = new LatinCaribbeanCountry("Grenada", Country.Zone.Latin_America_and_Carribean);
             Country laac30 = new LatinCaribbeanCountry("St. Vincent & Grenadines", Country.Zone.Latin_America_and_Carribean);
-            Country laac31 = new LatinCaribbeanCountry("Antiguaand Barbuda", Country.Zone.Latin_America_and_Carribean);
+            Country laac31 = new LatinCaribbeanCountry("Antigua and Barbuda", Country.Zone.Latin_America_and_Carribean);
             Country laac32 = new LatinCaribbeanCountry("Dominica", Country.Zone.Latin_America_and_Carribean);
             Country laac33 = new LatinCaribbeanCountry("Saint Kitts & Nevis", Country.Zone.Latin_America_and_Carribean);
             Country oceania1 = new OceanicCountry("Australia", Country.Zone.Oceania);
