@@ -28,7 +28,18 @@ namespace Time_Travel
         {
             InitializeComponent();
         }
+        private void world_countries_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Country selectedCountry = list_bx_world_countries.SelectedItem as Country;
 
+            if (selectedCountry != null)
+            {
+
+            }
+        }
+
+        //Massive region containing all country lists
+        #region Countries List
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             Country africa1 = new AfricanCountry("Nigeria", Country.Zone.Africa);
@@ -426,17 +437,12 @@ namespace Time_Travel
             //Dsplay the countries
             list_bx_world_countries.ItemsSource = allCountries;
         }
+        #endregion
 
+        //##########################
 
-        private void world_countries_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            Country selectedCountry = list_bx_world_countries.SelectedItem as Country;
-
-            if (selectedCountry != null)
-            {
-            
-            }
-        }
+        //End Of Listboxes Region for all of the listboxes and buttons for them
+        #region ListBoxes
 
         //Add countries to the bucket list from all countries list
         private void bucket_add_Click(object sender, RoutedEventArgs e)
@@ -514,12 +520,17 @@ namespace Time_Travel
             list_bx_world_visited.ItemsSource = null;
             list_bx_world_visited.ItemsSource = visitedCountries;
         }
+        #endregion
 
+        //##########################
+
+        //Region for all of the smaller methods that don't quite fit in another region
+        #region Small Methods
         //Sorts the countries method
         private void sortCountries()
         {
             allCountries.Sort();
         }
-        
+        #endregion
     }
 }

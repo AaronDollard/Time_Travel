@@ -20,6 +20,5 @@
         <Button x:Name="bucket_visited" Content="Visited " HorizontalAlignment="Left" Height="40" Margin="480,250,0,0" VerticalAlignment="Top" Width="80" Click="bucket_visited_Click"/>
         <Button x:Name="bucket_add_Copy1" Content="Edit" HorizontalAlignment="Left" Height="18" Margin="656,320,0,0" VerticalAlignment="Top" Width="64"/>
         <TextBlock HorizontalAlignment="Left" Height="26" Margin="480,322,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92" Text="Countries Visited"/>
-
     </Grid>
 </Window>
