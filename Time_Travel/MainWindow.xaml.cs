@@ -22,6 +22,7 @@ namespace Time_Travel
     {
         List<Country> allCountries = new List<Country>();
         List<Country> selectedCountries = new List<Country>();
+        List<Country> visitedCountries = new List<Country>();
 
         public MainWindow()
         {
@@ -421,7 +422,7 @@ namespace Time_Travel
             allCountries.Add(northa1);
             allCountries.Add(northa2);
             //Sorts the names of the countries.
-            allCountries.Sort();
+            sortCountries();
             //Dsplay the countries
             list_bx_world_countries.ItemsSource = allCountries;
         }
@@ -437,6 +438,7 @@ namespace Time_Travel
             }
         }
 
+        //Add countries to the bucket list from all countries list
         private void bucket_add_Click(object sender, RoutedEventArgs e)
         {
             Country selectedCountry = list_bx_world_countries.SelectedItem as Country; //Grabbing the selected item
@@ -444,21 +446,12 @@ namespace Time_Travel
             //Making sure something is selected
             if (selectedCountry != null)
             {
-                //Moves activity to the other list
+                //Moves country to the other list
                 allCountries.Remove(selectedCountry);
                 selectedCountries.Add(selectedCountry);
-
+                sortCountries();
                 RefreshScreens();
             }
-
-            //foreach (Country country in allCountries)
-            //{
-            //    //If the type matches the type that was clicked, display them
-            //    if (country.Name == country.Name)
-            //    {
-            //        MessageBox.Show("Please select an activity dates that do not collide!", "Attention!");
-            //    }
-            //}
 
             if (selectedCountry == null)
             {
@@ -466,14 +459,67 @@ namespace Time_Travel
             }
         }
 
-        //The method below refreshes the cart and selector screen
+        //Add countries back to the all countries from the bucket
+        private void bucket_remove_Click(object sender, RoutedEventArgs e)
+        {
+            Country selectedCountry = list_bx_world_bucket.SelectedItem as Country; //Grabbing the selected item
+
+            //Making sure something is selected
+            if (selectedCountry != null)
+            {
+                //Moves country to the other list
+                selectedCountries.Remove(selectedCountry);
+                allCountries.Add(selectedCountry);
+                sortCountries();
+                RefreshScreens();
+            }
+
+            if (selectedCountry == null)
+            {
+                MessageBox.Show("Please select an country to remove from bucketlist!", "Attention!");
+            }
+        }
+
+        //Add countrys to the countries you have visited list
+        private void bucket_visited_Click(object sender, RoutedEventArgs e)
+        {
+
+            Country selectedCountry = list_bx_world_bucket.SelectedItem as Country; //Grabbing the selected item
+
+            //Making sure something is selected
+            if (selectedCountry != null)
+            {
+                //Moves country to the other list
+                selectedCountries.Remove(selectedCountry);
+                visitedCountries.Add(selectedCountry);
+                sortCountries();
+                RefreshScreens();
+            }
+
+            if (selectedCountry == null)
+            {
+                MessageBox.Show("Please select a country you have visited!", "Attention!");
+            }
+        }
+
+        //The method below refreshes the countries and bucket screen
         private void RefreshScreens()
         {
             list_bx_world_countries.ItemsSource = null;
-            list_bx_world_bucket.ItemsSource = allCountries;
+            list_bx_world_countries.ItemsSource = allCountries;
 
             list_bx_world_bucket.ItemsSource = null;
             list_bx_world_bucket.ItemsSource = selectedCountries;
+
+            list_bx_world_visited.ItemsSource = null;
+            list_bx_world_visited.ItemsSource = visitedCountries;
         }
+
+        //Sorts the countries method
+        private void sortCountries()
+        {
+            allCountries.Sort();
+        }
+        
     }
 }
