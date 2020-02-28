@@ -28,15 +28,6 @@ namespace Time_Travel
         {
             InitializeComponent();
         }
-        private void world_countries_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            Country selectedCountry = list_bx_world_countries.SelectedItem as Country;
-
-            if (selectedCountry != null)
-            {
-
-            }
-        }
 
         //Massive region containing all country lists
         #region Countries List
@@ -96,6 +87,7 @@ namespace Time_Travel
             Country africa52 = new AfricanCountry("Cabo Verde", Country.Zone.Africa);
             Country africa53 = new AfricanCountry("Sao Tom & Principe", Country.Zone.Africa);
             Country africa54 = new AfricanCountry("Seychelles", Country.Zone.Africa);
+            //Asian Region
             Country asia1 = new AsianCountry("China", Country.Zone.Asia);
             Country asia2 = new AsianCountry("India", Country.Zone.Asia);
             Country asia3 = new AsianCountry("Indonesia", Country.Zone.Asia);
@@ -144,6 +136,7 @@ namespace Time_Travel
             Country asia46 = new AsianCountry("Bhutan", Country.Zone.Asia);
             Country asia47 = new AsianCountry("Maldives", Country.Zone.Asia);
             Country asia48 = new AsianCountry("Brunei", Country.Zone.Asia);
+            //European Region
             Country euro1 = new Country("Russia", Country.Zone.Europe);
             Country euro2 = new EuropeanCountry("Germany", Country.Zone.Europe);
             Country euro3 = new EuropeanCountry("United Kingdom", Country.Zone.Europe);
@@ -188,6 +181,7 @@ namespace Time_Travel
             Country euro42 = new EuropeanCountry("Liechtenstein", Country.Zone.Europe);
             Country euro43 = new EuropeanCountry("San Marino", Country.Zone.Europe);
             Country euro44 = new EuropeanCountry("Holy See", Country.Zone.Europe);
+            //Latin American Region
             Country laac1 = new LatinCaribbeanCountry("Brazil", Country.Zone.Latin_America_and_Carribean);
             Country laac2 = new LatinCaribbeanCountry("Mexico", Country.Zone.Latin_America_and_Carribean);
             Country laac3 = new LatinCaribbeanCountry("Colombia", Country.Zone.Latin_America_and_Carribean);
@@ -221,6 +215,7 @@ namespace Time_Travel
             Country laac31 = new LatinCaribbeanCountry("Antigua and Barbuda", Country.Zone.Latin_America_and_Carribean);
             Country laac32 = new LatinCaribbeanCountry("Dominica", Country.Zone.Latin_America_and_Carribean);
             Country laac33 = new LatinCaribbeanCountry("Saint Kitts & Nevis", Country.Zone.Latin_America_and_Carribean);
+            //Oceanic Region
             Country oceania1 = new OceanicCountry("Australia", Country.Zone.Oceania);
             Country oceania2 = new OceanicCountry("Papua New Guinea", Country.Zone.Oceania);
             Country oceania3 = new OceanicCountry("New Zealand", Country.Zone.Oceania);
