@@ -524,6 +524,12 @@ namespace Time_Travel
 
         //##########################
 
+        #region CountryFilter
+       
+        #endregion
+
+        //##########################
+
         //Region for all of the smaller methods that don't quite fit in another region
         #region Small Methods
         //Sorts the countries method
