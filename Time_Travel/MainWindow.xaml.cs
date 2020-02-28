@@ -21,6 +21,7 @@ namespace Time_Travel
     public partial class MainWindow : Window
     {
         List<Country> allCountries = new List<Country>();
+        List<Country> selectedCountries = new List<Country>();
 
         public MainWindow()
         {
@@ -434,6 +435,45 @@ namespace Time_Travel
             {
             
             }
+        }
+
+        private void bucket_add_Click(object sender, RoutedEventArgs e)
+        {
+            Country selectedCountry = list_bx_world_countries.SelectedItem as Country; //Grabbing the selected item
+
+            //Making sure something is selected
+            if (selectedCountry != null)
+            {
+                //Moves activity to the other list
+                allCountries.Remove(selectedCountry);
+                selectedCountries.Add(selectedCountry);
+
+                RefreshScreens();
+            }
+
+            //foreach (Country country in allCountries)
+            //{
+            //    //If the type matches the type that was clicked, display them
+            //    if (country.Name == country.Name)
+            //    {
+            //        MessageBox.Show("Please select an activity dates that do not collide!", "Attention!");
+            //    }
+            //}
+
+            if (selectedCountry == null)
+            {
+                MessageBox.Show("Please select an country to add to bucketlist!", "Attention!");
+            }
+        }
+
+        //The method below refreshes the cart and selector screen
+        private void RefreshScreens()
+        {
+            list_bx_world_countries.ItemsSource = null;
+            list_bx_world_bucket.ItemsSource = allCountries;
+
+            list_bx_world_bucket.ItemsSource = null;
+            list_bx_world_bucket.ItemsSource = selectedCountries;
         }
     }
 }

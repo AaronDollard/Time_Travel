@@ -34,8 +34,6 @@ namespace Time_Travel
         }
     }//End of the country class 
 
-
-
     //Subclasses of each zone in the world
     public class AfricanCountry : Country
     {

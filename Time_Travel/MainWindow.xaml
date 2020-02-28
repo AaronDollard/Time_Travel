@@ -11,7 +11,7 @@
         <ListBox x:Name="list_bx_world_countries" HorizontalAlignment="Left" Height="460" Margin="80,60,0,0" VerticalAlignment="Top" Width="240" SelectionChanged="world_countries_SelectionChanged"/>
         <ListBox x:Name="list_bx_world_bucket" HorizontalAlignment="Left" Height="180" Margin="480,60,0,0" VerticalAlignment="Top" Width="240"/>
         <ListBox x:Name="list_bx_world_visited" HorizontalAlignment="Left" Height="180" Margin="480,340,0,0" VerticalAlignment="Top" Width="240"/>
-        <Button x:Name="bucket_add" Content="Bucket" HorizontalAlignment="Left" Height="20" Margin="360,100,0,0" VerticalAlignment="Top" Width="80"/>
+        <Button x:Name="bucket_add" Content="Bucket" HorizontalAlignment="Left" Height="20" Margin="360,100,0,0" VerticalAlignment="Top" Width="80" Click="bucket_add_Click"/>
         <Button x:Name="bucket_remove" Content="Remove" HorizontalAlignment="Left" Height="20" Margin="360,140,0,0" VerticalAlignment="Top" Width="80"/>
         <ComboBox x:Name="world_countries_filter" HorizontalAlignment="Left" Height="20" Margin="220,20,0,0" VerticalAlignment="Top" Width="100"/>
         <TextBlock HorizontalAlignment="Left" Height="25" Margin="80,41,0,0" TextWrapping="Wrap" Text="Countries" VerticalAlignment="Top" Width="135"/>
