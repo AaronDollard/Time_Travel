@@ -7,18 +7,28 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="800
         " Loaded="Window_Loaded">
-    <Grid>
-        <ListBox x:Name="list_bx_world_countries" HorizontalAlignment="Left" Height="460" Margin="80,60,0,0" VerticalAlignment="Top" Width="240"/>
-        <ListBox x:Name="list_bx_world_bucket" HorizontalAlignment="Left" Height="180" Margin="480,60,0,0" VerticalAlignment="Top" Width="240"/>
-        <ListBox x:Name="list_bx_world_visited" HorizontalAlignment="Left" Height="180" Margin="480,340,0,0" VerticalAlignment="Top" Width="240"/>
-        <Button x:Name="bucket_add" Content="Bucket" HorizontalAlignment="Left" Height="20" Margin="360,100,0,0" VerticalAlignment="Top" Width="80" Click="bucket_add_Click"/>
-        <Button x:Name="bucket_remove" Content="Remove" HorizontalAlignment="Left" Height="20" Margin="360,140,0,0" VerticalAlignment="Top" Width="80" Click="bucket_remove_Click"/>
-        <ComboBox x:Name="world_countries_filter" HorizontalAlignment="Left" Height="20" Margin="220,20,0,0" VerticalAlignment="Top" Width="100"/>
-        <TextBlock HorizontalAlignment="Left" Height="25" Margin="80,41,0,0" TextWrapping="Wrap" Text="Countries" VerticalAlignment="Top" Width="135"/>
-        <TextBlock HorizontalAlignment="Left" Height="25" Margin="480,41,0,0" TextWrapping="Wrap" Text="Countries Bucketed" VerticalAlignment="Top" Width="135"/>
-        <TextBlock HorizontalAlignment="Left" Height="20" Margin="190,21,0,0" TextWrapping="Wrap" Text="Filter" VerticalAlignment="Top" Width="74"/>
-        <Button x:Name="bucket_visited" Content="Visited " HorizontalAlignment="Left" Height="40" Margin="480,250,0,0" VerticalAlignment="Top" Width="80" Click="bucket_visited_Click"/>
-        <Button x:Name="bucket_add_Copy1" Content="Edit" HorizontalAlignment="Left" Height="18" Margin="656,320,0,0" VerticalAlignment="Top" Width="64"/>
-        <TextBlock HorizontalAlignment="Left" Height="26" Margin="480,322,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92" Text="Countries Visited"/>
-    </Grid>
+
+    <TabControl TabStripPlacement="Top">
+        <TabItem Name="Planner" Header="Planner" Width="70">
+            <Grid>
+                <ListBox x:Name="list_bx_world_countries" HorizontalAlignment="Left" Height="460" Margin="80,60,0,0" VerticalAlignment="Top" Width="240"/>
+                <ListBox x:Name="list_bx_world_bucket" HorizontalAlignment="Left" Height="388" Margin="480,60,0,0" VerticalAlignment="Top" Width="240"/>
+                <Button x:Name="bucket_add" Content="Bucket" HorizontalAlignment="Left" Height="20" Margin="360,100,0,0" VerticalAlignment="Top" Width="80" Click="bucket_add_Click"/>
+                <Button x:Name="bucket_remove" Content="Remove" HorizontalAlignment="Left" Height="20" Margin="360,140,0,0" VerticalAlignment="Top" Width="80" Click="bucket_remove_Click"/>
+                <ComboBox x:Name="world_countries_filter" HorizontalAlignment="Left" Height="20" Margin="154,20,0,0" VerticalAlignment="Top" Width="166" SelectionChanged="world_countries_filter_SelectionChanged" />
+                <TextBlock HorizontalAlignment="Left" Height="25" Margin="80,41,0,0" TextWrapping="Wrap" Text="Countries" VerticalAlignment="Top" Width="135"/>
+                <TextBlock HorizontalAlignment="Left" Height="25" Margin="480,41,0,0" TextWrapping="Wrap" Text="Countries Bucketed" VerticalAlignment="Top" Width="135"/>
+                <TextBlock HorizontalAlignment="Left" Height="20" Margin="80,20,0,0" TextWrapping="Wrap" Text="Filter" VerticalAlignment="Top" Width="74"/>
+                <Button x:Name="bucket_visited" Content="Visited " HorizontalAlignment="Left" Height="40" Margin="561,480,0,0" VerticalAlignment="Top" Width="80" Click="bucket_visited_Click"/>
+            </Grid>
+        </TabItem>
+
+        <TabItem Name="Explored" Header="Explored" Width="70">
+            <Grid>
+                <Button x:Name="bucket_edit" Content="Edit" HorizontalAlignment="Left" Height="18" Margin="256,37,0,0" VerticalAlignment="Top" Width="64"/>
+                <TextBlock HorizontalAlignment="Left" Height="25" Margin="80,41,0,0" TextWrapping="Wrap" Text="Countries Visited" VerticalAlignment="Top" Width="135"/>
+                <ListBox x:Name="list_bx_world_visited"  HorizontalAlignment="Left" Height="460" Margin="80,60,0,0" VerticalAlignment="Top" Width="240"/>
+            </Grid>
+        </TabItem>
+    </TabControl>
 </Window>

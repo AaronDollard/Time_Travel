@@ -520,7 +520,10 @@ namespace Time_Travel
         //##########################
 
         #region CountryFilter
-       
+        private void world_countries_filter_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            RefreshScreens();
+        }
         #endregion
 
         //##########################
@@ -530,8 +533,12 @@ namespace Time_Travel
         //Sorts the countries method
         private void sortCountries()
         {
+            
             allCountries.Sort();
         }
+
         #endregion
+
+
     }
 }
