@@ -26,13 +26,11 @@ namespace Time_Travel
         List<Country> selectedCountries = new List<Country>();
         List<Country> visitedCountries = new List<Country>();
 
-
         public MainWindow()
         {
             InitializeComponent();
         }
-
-        
+ 
         private void Window_Loaded(object sender, RoutedEventArgs e) //Massive region containing all country lists
         {
             world_filter_combo.SelectedIndex = 0; //Sets the default item in the box as all
@@ -64,7 +62,6 @@ namespace Time_Travel
             }
         } //Add countries to the bucket list from all countries list
 
-
         private void bucket_remove_Click(object sender, RoutedEventArgs e)
         {
             Country selectedCountry = list_bx_world_bucket.SelectedItem as Country; //Grabbing the selected item
@@ -84,7 +81,6 @@ namespace Time_Travel
                 MessageBox.Show("Please select an country to remove from bucketlist!", "Attention!");
             }
         } //Add countries back to the all countries from the bucket
-
 
         private void bucket_visited_Click(object sender, RoutedEventArgs e)
         {
@@ -106,7 +102,6 @@ namespace Time_Travel
                 MessageBox.Show("Please select a country you have visited!", "Attention!");
             }
         } //Add countries to the countries you have visited list
-
 
         private void RefreshScreens() //The method below refreshes the countries and bucket screen
         {
@@ -208,6 +203,11 @@ namespace Time_Travel
                 list_bx_world_countries.ItemsSource = query.ToList();
             }
             
+        }
+
+        private void github_link_Click(object sender, RoutedEventArgs e) //Click to go to my Github
+        {
+            System.Diagnostics.Process.Start("https://github.com/AaronDollard/Time_Travel");
         }
     }
 }
