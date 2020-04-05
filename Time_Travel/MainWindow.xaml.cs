@@ -34,27 +34,20 @@ namespace Time_Travel
         #region Countries List
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-           world_filter_combo.Items.Add("Europe");
-           world_filter_combo.Items.Add("Asia");
-           world_filter_combo.Items.Add("Africa");
-           world_filter_combo.Items.Add("Oceana");
-           world_filter_combo.Items.Add("Latin America and Carribean");
-           world_filter_combo.Items.Add("North America");
-           world_filter_combo.Items.Add("South America");
+            world_filter_combo.ItemsSource = Enum.GetNames(typeof(Country.Zone));//populates the combobox with the enum
 
-            //Display the countries
-            var country = from c in db.WorldCountry
-                        select c.CountryID;
+            
+            var country = from c in db.WorldCountry //Display the countries
+                          select c.CountryID;
 
-            list_bx_world_countries.ItemsSource = country.ToList();
-            sortCountries(); //Sorts the names of the countries.
+            list_bx_world_countries.ItemsSource = country.ToList(); //sortCountries(); //Sorts the names of the countries.
+
         }
         #endregion        
         //##########################
         //##########################
-        #region ListBoxes
 
-        //Add countries to the bucket list from all countries list
+        #region ListBoxes
         private void bucket_add_Click(object sender, RoutedEventArgs e)
         {
             Country selectedCountry = list_bx_world_countries.SelectedItem as Country; //Grabbing the selected item
@@ -73,11 +66,9 @@ namespace Time_Travel
             {
                 MessageBox.Show("Please select an country to add to bucketlist!", "Attention!");
             }
-        }
+        } //Add countries to the bucket list from all countries list
 
 
-
-        //Add countries back to the all countries from the bucket
         private void bucket_remove_Click(object sender, RoutedEventArgs e)
         {
             Country selectedCountry = list_bx_world_bucket.SelectedItem as Country; //Grabbing the selected item
@@ -96,9 +87,9 @@ namespace Time_Travel
             {
                 MessageBox.Show("Please select an country to remove from bucketlist!", "Attention!");
             }
-        }
+        } //Add countries back to the all countries from the bucket
 
-        //Add countrys to the countries you have visited list
+
         private void bucket_visited_Click(object sender, RoutedEventArgs e)
         {
 
@@ -118,41 +109,65 @@ namespace Time_Travel
             {
                 MessageBox.Show("Please select a country you have visited!", "Attention!");
             }
-        }
+        } //Add countries to the countries you have visited list
 
-        //The method below refreshes the countries and bucket screen
-        private void RefreshScreens()
+
+        private void RefreshScreens() //The method below refreshes the countries and bucket screen
         {
-            list_bx_world_countries.ItemsSource = null;
-            list_bx_world_countries.ItemsSource = allCountries;
+            //list_bx_world_countries.ItemsSource = null;
+            //list_bx_world_countries.ItemsSource = allCountries;
 
-            list_bx_world_bucket.ItemsSource = null;
-            list_bx_world_bucket.ItemsSource = selectedCountries;
+            //list_bx_world_bucket.ItemsSource = null;
+            //list_bx_world_bucket.ItemsSource = selectedCountries;
 
-            list_bx_world_visited.ItemsSource = null;
-            list_bx_world_visited.ItemsSource = visitedCountries;
+            //list_bx_world_visited.ItemsSource = null;
+            //list_bx_world_visited.ItemsSource = visitedCountries;
         }
         #endregion
 
-        //##########################
         private void world_filter_combo_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-           
+            var query = from c in db.WorldCountry
+                          select c.CountryID;
+
+            string selected = world_filter_combo.SelectedItem.ToString();
+
+
+            switch (selected)
+            {
+
+                case "Europe":
+                    query = from p in db.WorldCountry
+                            orderby p.CountryZone
+                            select p.CountryID;
+                    break;
+
+                case "Asia":
+                    break;
+
+                case "Africa":
+                    break;
+                
+                            case "Oceana":
+                    break;
+
+                            case "Latin America and Carribean":
+                    break;
+
+                            case "North America":
+                    break;
+
+                            case "South America":
+                    break;
         }
+            //Update items list
+            list_bx_world_countries.ItemsSource = query.ToList();
 
-        //##########################
-
-        //Region for all of the smaller methods that don't quite fit in another region
-        #region Small Methods
-        //Sorts the countries method
-        private void sortCountries()
+        }
+        
+        private void sortCountries() //Sorts the countries method
         { 
             allCountries.Sort();
-        }
-        #endregion
-
-        private void countries_search_TextChanged(object sender, TextChangedEventArgs e)
-        {
         }
     }
 }

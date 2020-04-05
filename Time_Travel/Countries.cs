@@ -11,7 +11,7 @@ namespace Time_Travel
 
     public class Country : IComparable<Country>
     {
-        public enum Zone { Africa, Asia, Europe, Latin_America_and_Carribean, Oceania, North_America }
+        public enum Zone { Africa, Asia, Europe, Latin_America_and_Carribean, Oceania, North_America, None }
 
         //Properities
         public string CountryID { get; set; }
