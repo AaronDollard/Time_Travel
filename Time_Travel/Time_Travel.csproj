@@ -127,6 +127,12 @@
   <ItemGroup>
     <Resource Include="globe.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assests\github.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assests\globe.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

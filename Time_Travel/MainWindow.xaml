@@ -68,7 +68,8 @@
             </Grid>
         </TabItem>
 
-        <TabItem Name="GitHub" Header="My GitHub" Width="70" HorizontalAlignment="Right">
+        <TabItem Name="GitHub" Header="My GitHub" Width="70" HorizontalAlignment="Right" Background="{x:Null}">
+            
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="29"/>
@@ -86,6 +87,9 @@
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
+                <Grid.Background>
+                    <ImageBrush ImageSource="C:\Users\Finnbar\source\repos\AaronDollard\Time_Travel\Time_Travel\Assests\github.jpg" />
+                </Grid.Background>
 
                 <Button Grid.Row="4" Grid.Column="1" x:Name="github_link" Content="GitHub Link" Height="18" Width="70" Click="github_link_Click"/>
             </Grid>
