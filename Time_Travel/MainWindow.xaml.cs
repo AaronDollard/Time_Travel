@@ -24,6 +24,8 @@ namespace Time_Travel
         List<Country> selectedCountries = new List<Country>();
         List<Country> visitedCountries = new List<Country>();
 
+
+
         public MainWindow()
         {
             InitializeComponent();
@@ -33,6 +35,16 @@ namespace Time_Travel
         #region Countries List
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+           world_filter_combo.Items.Add("Europe");
+           world_filter_combo.Items.Add("Asia");
+           world_filter_combo.Items.Add("Africa");
+           world_filter_combo.Items.Add("Oceana");
+           world_filter_combo.Items.Add("Latin America and Carribean");
+           world_filter_combo.Items.Add("North America");
+           world_filter_combo.Items.Add("South America");
+
+        //##########################
+            #region //Region for all the countries
             Country africa1 = new AfricanCountry("Nigeria", Country.Zone.Africa);
             Country africa2 = new AfricanCountry("Ethiopia", Country.Zone.Africa);
             Country africa3 = new AfricanCountry("Egypt", Country.Zone.Africa);
@@ -433,7 +445,6 @@ namespace Time_Travel
             list_bx_world_countries.ItemsSource = allCountries;
         }
         #endregion
-
         //##########################
 
         //End Of Listboxes Region for all of the listboxes and buttons for them
@@ -518,13 +529,10 @@ namespace Time_Travel
         #endregion
 
         //##########################
-
-        #region CountryFilter
-        private void world_countries_filter_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void world_filter_combo_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            RefreshScreens();
+           
         }
-        #endregion
 
         //##########################
 
@@ -536,9 +544,11 @@ namespace Time_Travel
             
             allCountries.Sort();
         }
-
         #endregion
 
-
+        private void countries_search_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
+        }
     }
 }
