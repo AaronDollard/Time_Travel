@@ -18,7 +18,7 @@
                 <TextBlock HorizontalAlignment="Left" Height="25" Margin="480,41,0,0" TextWrapping="Wrap" Text="Countries Bucketed" VerticalAlignment="Top" Width="135"/>
                 <TextBlock HorizontalAlignment="Left" Height="20" Margin="49,21,0,0" TextWrapping="Wrap" Text="Filter" VerticalAlignment="Top" Width="74"/>
                 <Button x:Name="bucket_visited" Content="Visited " HorizontalAlignment="Left" Height="40" Margin="561,480,0,0" VerticalAlignment="Top" Width="80" Click="bucket_visited_Click"/>
-                <TextBox x:Name="countries_search" HorizontalAlignment="Left" Height="20" Margin="80,20,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="128"/>
+                <TextBox x:Name="countries_search" HorizontalAlignment="Left" Height="20" Margin="80,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128" TextChanged="countries_search_TextChanged"/>
                 <ComboBox x:Name="world_filter_combo" HorizontalAlignment="Left" Height="20" Margin="213,20,0,0" VerticalAlignment="Top" Width="107" SelectionChanged="world_filter_combo_SelectionChanged"/>
             </Grid>
         </TabItem>

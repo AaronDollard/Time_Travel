@@ -11,14 +11,13 @@ namespace Time_Travel
 
     public class Country : IComparable<Country>
     {
-        public enum Zone { Africa, Asia, Europe, Latin_America_and_Carribean, Oceania, North_America, None }
 
         //Properities
         public string CountryID { get; set; }
-        public Zone CountryZone { get; set; }
+        public string CountryZone { get; set; }
 
         //Constructor
-        public Country(string name, Zone countryzone)
+        public Country(string name, string countryzone)
         {
             CountryID = name;
             CountryZone = countryzone;
@@ -42,7 +41,7 @@ namespace Time_Travel
     //Subclasses of each zone in the world
     public class AfricanCountry : Country
     {
-        public AfricanCountry(string name, Zone countryzone) : base(name, countryzone)
+        public AfricanCountry(string name, string countryzone) : base(name, countryzone)
         {
         }
         public override string ToString()
@@ -53,7 +52,7 @@ namespace Time_Travel
 
     public class AsianCountry : Country
     {
-        public AsianCountry(string name, Zone countryzone) : base(name, countryzone)
+        public AsianCountry(string name, string countryzone) : base(name, countryzone)
         {
         }
         public override string ToString()
@@ -64,7 +63,7 @@ namespace Time_Travel
 
     public class EuropeanCountry : Country
     {
-        public EuropeanCountry(string name, Zone countryzone) : base(name, countryzone)
+        public EuropeanCountry(string name, string countryzone) : base(name, countryzone)
         {
         }
         public override string ToString()
@@ -75,7 +74,7 @@ namespace Time_Travel
 
     public class LatinCaribbeanCountry : Country
     {
-        public LatinCaribbeanCountry(string name, Zone countryzone) : base(name, countryzone)
+        public LatinCaribbeanCountry(string name, string countryzone) : base(name, countryzone)
         {
         }
         public override string ToString()
@@ -86,7 +85,7 @@ namespace Time_Travel
 
     public class OceanicCountry : Country
     {
-        public OceanicCountry(string name, Zone countryzone) : base(name, countryzone)
+        public OceanicCountry(string name, string countryzone) : base(name, countryzone)
         {
         }
         public override string ToString()
@@ -97,7 +96,7 @@ namespace Time_Travel
 
     public class NorthAmericanCountry : Country
     {
-        public NorthAmericanCountry(string name, Zone countryzone) : base(name, countryzone)
+        public NorthAmericanCountry(string name, string countryzone) : base(name, countryzone)
         {
         }
         public override string ToString()

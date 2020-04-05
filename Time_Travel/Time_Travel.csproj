@@ -80,6 +80,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\202004051356363_InitialCreate.cs" />
+    <Compile Include="Migrations\202004051356363_InitialCreate.designer.cs">
+      <DependentUpon>202004051356363_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004051642288_WorldZone.cs" />
+    <Compile Include="Migrations\202004051642288_WorldZone.designer.cs">
+      <DependentUpon>202004051642288_WorldZone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -93,6 +102,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Migrations\202004051356363_InitialCreate.resx">
+      <DependentUpon>202004051356363_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004051642288_WorldZone.resx">
+      <DependentUpon>202004051642288_WorldZone.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
