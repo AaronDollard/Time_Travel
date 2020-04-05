@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Time_Travel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="1000" Loaded="Window_Loaded">
+        Title="Travel Log" Height="600" Width="1000" Loaded="Window_Loaded"
+        Icon="Globe.ico"
+        >
 
     <TabControl TabStripPlacement="Top">
         <TabItem Name="Planner" Header="Planner" Width="70">
