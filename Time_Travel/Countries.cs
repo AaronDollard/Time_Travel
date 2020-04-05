@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
+
 
 namespace Time_Travel
 {
@@ -12,27 +14,29 @@ namespace Time_Travel
         public enum Zone { Africa, Asia, Europe, Latin_America_and_Carribean, Oceania, North_America }
 
         //Properities
-        public string Name { get; set; }
+        public string CountryID { get; set; }
         public Zone CountryZone { get; set; }
 
         //Constructor
         public Country(string name, Zone countryzone)
         {
-            Name = name;
+            CountryID = name;
             CountryZone = countryzone;
         }
 
         //ToString for the ListBox of countries
         public override string ToString()
         {
-            return $"{Name}";
+            return $"{CountryID}";
         }
 
         //Comapring the names of te countries to sort them by name
         public int CompareTo(Country other)
         {
-            return Name.CompareTo(other.Name);
+            return CountryID.CompareTo(other.CountryID);
         }
+        public virtual List<Country> WorldCountry { get; set; }
+
     }//End of the country class 
 
     //Subclasses of each zone in the world
@@ -43,7 +47,7 @@ namespace Time_Travel
         }
         public override string ToString()
         {
-            return $"{Name} - Africa";
+            return $"{CountryID} - Africa";
         }
     }
 
@@ -54,7 +58,7 @@ namespace Time_Travel
         }
         public override string ToString()
         {
-            return $"{Name} - Asia";
+            return $"{CountryID} - Asia";
         }
     }
 
@@ -65,7 +69,7 @@ namespace Time_Travel
         }
         public override string ToString()
         {
-            return $"{Name} - Europe";
+            return $"{CountryID} - Europe";
         }
     }
 
@@ -76,7 +80,7 @@ namespace Time_Travel
         }
         public override string ToString()
         {
-            return $"{Name} - Latin America & Caribbean";
+            return $"{CountryID} - Latin America & Caribbean";
         }
     }
 
@@ -87,7 +91,7 @@ namespace Time_Travel
         }
         public override string ToString()
         {
-            return $"{Name} - Oceanic";
+            return $"{CountryID} - Oceanic";
         }
     }
 
@@ -98,7 +102,14 @@ namespace Time_Travel
         }
         public override string ToString()
         {
-            return $"{Name} - North America";
+            return $"{CountryID} - North America";
         }
+    }
+
+    //Database code
+    public class CountryData : DbContext
+    {
+        public CountryData() : base("WorldDatabase") { }
+        public DbSet<Country> WorldCountry { get; set; }
     }
 }

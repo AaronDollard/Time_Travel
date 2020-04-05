@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Time_Travel", "Time_Travel\Time_Travel.csproj", "{5974CC7F-865B-4009-A440-7B6265922A6D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseManagement", "DatabaseManagement\DatabaseManagement.csproj", "{6FE989FC-07FD-4606-8F6A-77FF326D72BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5974CC7F-865B-4009-A440-7B6265922A6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5974CC7F-865B-4009-A440-7B6265922A6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5974CC7F-865B-4009-A440-7B6265922A6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FE989FC-07FD-4606-8F6A-77FF326D72BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FE989FC-07FD-4606-8F6A-77FF326D72BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FE989FC-07FD-4606-8F6A-77FF326D72BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FE989FC-07FD-4606-8F6A-77FF326D72BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
