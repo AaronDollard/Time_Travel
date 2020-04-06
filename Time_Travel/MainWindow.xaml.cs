@@ -33,7 +33,7 @@ namespace Time_Travel
  
         private void Window_Loaded(object sender, RoutedEventArgs e) //Massive region containing all country lists
         {
-            world_filter_combo.SelectedIndex = 0; //Sets the default item in the box as all
+            world_filter_combo.SelectedIndex = 0; //Sets the default item in the box as "all"
             world_filter_combo.ItemsSource = Enum.GetNames(typeof(Zone));//Populates the combobox
             var country = from c in db.WorldCountry //Display the countries
                           select c.CountryID;
@@ -42,25 +42,27 @@ namespace Time_Travel
         }
 
         #region ListBoxes
-        private void bucket_add_Click(object sender, RoutedEventArgs e)
+        private void bucket_add_Click(object sender, RoutedEventArgs e) //Add countries to the bucket list from all countries list
         {
-            Country selectedCountry = list_bx_world_countries.SelectedItem as Country; //Grabbing the selected item
+            list_bx_world_bucket.Items.Add(list_bx_world_countries.SelectedItem);
+            list_bx_world_countries.Items.Remove(list_bx_world_countries.SelectedItem);
 
-            //Making sure something is selected
-            if (selectedCountry != null)
+            Country selectedCountry = list_bx_world_countries.SelectedItem as Country; //Grabbing the selected item
+            
+            if (selectedCountry != null) //Making sure something is selected
             {
-                //Moves country to the other list
-                allCountries.Remove(selectedCountry);
+                
+                allCountries.Remove(selectedCountry); //Moves country to the other list
                 selectedCountries.Add(selectedCountry);
                 sortCountries();
                 RefreshScreens();
             }
 
-            if (selectedCountry == null)
+            else if (selectedCountry == null) //Warning if nothing is selected
             {
                 MessageBox.Show("Please select an country to add to bucketlist!", "Attention!");
             }
-        } //Add countries to the bucket list from all countries list
+        } 
 
         private void bucket_remove_Click(object sender, RoutedEventArgs e)
         {
@@ -116,7 +118,7 @@ namespace Time_Travel
         }
         #endregion
 
-        private void world_filter_combo_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void world_filter_combo_SelectionChanged(object sender, SelectionChangedEventArgs e) //Filter for the combobox zones
         {
             
             var query = from c in db.WorldCountry
@@ -149,9 +151,9 @@ namespace Time_Travel
                             select p.CountryID;
                     break;
 
-                case "Oceana":
+                case "Oceania":
                     query = from p in db.WorldCountry
-                            where p.CountryZone.Equals("Oceana")
+                            where p.CountryZone.Equals("Oceania")
                             select p.CountryID;
                     break;
 
@@ -176,7 +178,7 @@ namespace Time_Travel
         
         list_bx_world_countries.ItemsSource = query.ToList(); //Update items list
 
-        } //Filter for the combobox zones
+        }
 
         private void sortCountries() //Sorts the countries method
         { 

@@ -11,7 +11,7 @@ namespace DatabaseManagement
     {
         static void Main(string[] args)
         {
-            CountryData db = new CountryData();
+            CountryData db = new CountryData(); //CountryDatabase
 
             using (db)
             {
