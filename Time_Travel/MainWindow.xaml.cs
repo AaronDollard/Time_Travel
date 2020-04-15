@@ -148,6 +148,7 @@ namespace Time_Travel
         }
         private void bucket_edit_Click(object sender, RoutedEventArgs e) //used when clicked on the button to edit the explored tab
         {
+            list_bx_world_visited.Items.Add(country_visited_input.Text);
             //string input = Interaction.InputBox("Enter the name of the country you visited?", "Country", "Country Name", -1, -1);
         }
         private void bucket_visited_Click(object sender, RoutedEventArgs e)//Adding countries you visited to the second tab
