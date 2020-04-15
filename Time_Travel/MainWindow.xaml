@@ -30,14 +30,17 @@
 
                 <ListBox    Grid.Column="0" Grid.Row="3" Grid.RowSpan="4" x:Name="list_bx_world_countries"   Width="240"/>
                 <ListBox    Grid.Column="2" Grid.Row="3" Grid.RowSpan="4" x:Name="list_bx_world_bucket"      Width="240"/>
-                <Button     Grid.Row="3"    Grid.ColumnSpan="3"           x:Name="bucket_add"                VerticalAlignment="Bottom" Content="Visited"      Height="20"         Click="bucket_add_Click" Width="80"/>
+                <TextBlock  Grid.Row="2"    HorizontalAlignment="Center"  Height="14"                        TextWrapping="Wrap"        Text="World Countries List" Width="135"/>
+                <TextBox    x:Name="country_visited_input"                  Grid.Row="3"                     Height="20"                Margin="37,131,37,0"   Text=""     VerticalAlignment="Top" Grid.Column="1" />
+                <Button     Grid.Row="3"    Grid.ColumnSpan="3"           x:Name="bucket_add"                VerticalAlignment="Bottom" Content="Wishlist"     Height="20"         Click="bucket_add_Click" Width="80"/>
                 <Button     Grid.Row="5"    Grid.ColumnSpan="3"           x:Name="bucket_remove"             VerticalAlignment="Top"    Content="Remove"       Height="20"         Width="80"               Click="bucket_remove_Click"/>
-                <TextBlock  Grid.Row="2"    HorizontalAlignment="Center"  Height="14"                        TextWrapping="Wrap"        Text="World Countries" Width="135"/>
-                <TextBlock  Grid.Column="2" Grid.Row="2"                  HorizontalAlignment="Center"       Height="14"                TextWrapping="Wrap"    Text="Countries Visited"                    Width="135"/>
+                <TextBlock  Grid.Row="3"    HorizontalAlignment="Center"                        TextWrapping="Wrap"        Text="Enter name of country to wishlist:" Width="195" Grid.Column="1" Margin="69,109,65,58"/>
+                <TextBlock  Grid.Column="2" Grid.Row="2"                  HorizontalAlignment="Center"       Height="14"                TextWrapping="Wrap"    Text="Countries Wishlist"                    Width="135"/>
                 <TextBlock  Grid.Row="0"    HorizontalAlignment="Left"    Height="14"                        TextWrapping="Wrap"        Text="Filter"          Width="30"                                   Margin="44,4,0,4"/>
-                <!--<Button     Grid.Column="5" Grid.Row="7"                  x:Name="bucket_visited"            Content="Visited"          Height="20"            Width="80"                                   Click="bucket_visited_Click"/>-->
+                <Button     Grid.Column="5" Grid.Row="7"                  x:Name="bucket_visited"            Content="Visited"          Height="20"            Width="80"                                   Click="bucket_visited_Click"/>
                 <TextBox    Grid.Row="1"    Grid.Column="0"               x:Name="countries_search"          Height="20"                TextWrapping="Wrap"    TextChanged="countries_search_TextChanged"   Margin="79,4,45,4"/>
                 <ComboBox   Grid.Row="0"    Grid.Column="0"               x:Name="world_filter_combo"        Height="20"                SelectionChanged="world_filter_combo_SelectionChanged"              Margin="80,4,45,5"/>
+
             </Grid>
         </TabItem>
 
@@ -62,12 +65,12 @@
 
                 <TextBlock Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" Height="14" TextWrapping="Wrap" Text="Countries Visited" Width="135"/>
                 <ListBox  Grid.Column="0" Grid.Row="3" Grid.RowSpan="4" x:Name="list_bx_world_visited" Width="240"/>
-                <Button Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right" x:Name="bucket_edit" Content="Edit" Height="18" Width="64" Margin="0,6,45,5"/>
+                <Button Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right" x:Name="bucket_edit" Content="Edit" Height="18" Width="64" Margin="0,6,45,5" Click="bucket_edit_Click"/>
             </Grid>
         </TabItem>
 
         <TabItem Name="GitHub" Header="My GitHub" Width="70">
-            
+
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="29"/>
