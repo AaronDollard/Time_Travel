@@ -23,9 +23,7 @@ namespace Time_Travel
     public partial class MainWindow : Window
     {
         CountryData db = new CountryData(); //My custom world countries database I created
-        List<Country> allCountries = new List<Country>();
-        List<Country> selectedCountries = new List<Country>();
-        List<Country> visitedCountries = new List<Country>();
+        List<Country> allCountries = new List<Country>(); //List of countries to reference spelling in the main tab
 
         public MainWindow()
         {
@@ -148,14 +146,26 @@ namespace Time_Travel
         }
         private void bucket_edit_Click(object sender, RoutedEventArgs e) //used when clicked on the button to edit the explored tab
         {
-            string input = Interaction.InputBox("Enter the name of the country you visited?", "Country", "Country Name", -1, -1);
-            txtBlk_notes.Text = input;
+            var dateAndTime = DateTime.Now; //Getting the date and time
+
+            if (list_bx_world_visited.Items.Count > 0)
+            {
+                string input = Interaction.InputBox("Enter notes about your visit to this country?", "Notes", "", -1, -1);
+                txtBlk_notes.Text = "Notes: " + input + "\nDated: " + dateAndTime;
+            }
+            else
+            {
+                MessageBox.Show("Please add a country you've visited to add notes!", "Attention!");
+            }
         }
         private void bucket_visited_Click(object sender, RoutedEventArgs e)//Adding countries you visited to the second tab
         {
+            var dateVisited = DateTime.Now; //gets the date for when the button is clicked below
+
             if (list_bx_world_bucket.SelectedIndex != -1)
             {
                 list_bx_world_visited.Items.Add(list_bx_world_bucket.SelectedValue);
+                list_bx_travel_history.Items.Add(list_bx_world_bucket.SelectedValue + " - Visited: " + dateVisited.ToString("dd/MM/yyyy"));
                 list_bx_world_bucket.Items.Remove(list_bx_world_bucket.SelectedValue);
             }
             
@@ -210,6 +220,6 @@ namespace Time_Travel
                MessageBox.Show("Please select a country you have visited!", "Attention!");
            }
        } //Add countries to the countries you have visited list*/ //Unused button.
-        
+
     }
 }
