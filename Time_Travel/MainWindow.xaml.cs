@@ -24,6 +24,7 @@ namespace Time_Travel
     {
         CountryData db = new CountryData(); //My custom world countries database I created
         List<Country> allCountries = new List<Country>(); //List of countries to reference spelling in the main tab
+        public int visitedCounter = 0;
 
         public MainWindow()
         {
@@ -146,18 +147,22 @@ namespace Time_Travel
         }
         private void bucket_edit_Click(object sender, RoutedEventArgs e) //used when clicked on the button to edit the explored tab
         {
+            countryVisited selectedVisited = list_bx_world_visited.SelectedItem as countryVisited;
+
             var dateAndTime = DateTime.Now; //Getting the date and time
 
             if (list_bx_world_visited.Items.Count > 0)
             {
-                string input = Interaction.InputBox("Enter notes about your visit to this country?", "Notes", "", -1, -1);
-                txtBlk_notes.Text = "Notes: " + input + "\nDated: " + dateAndTime;
+               string input = Interaction.InputBox("Enter notes about your visit to this country?", "Notes", "", -1, -1);
+               selectedVisited.countryNotes = "Notes: " + input + "\nDated: " + dateAndTime;
             }
             else
             {
                 MessageBox.Show("Please add a country you've visited to add notes!", "Attention!");
             }
         }
+
+        #region Date & Time
         private void bucket_visited_Click(object sender, RoutedEventArgs e)//Adding countries you visited to the second tab
         {
             var dateVisited = DateTime.Now; //gets the date for when the button is clicked below
@@ -165,6 +170,7 @@ namespace Time_Travel
             if (list_bx_world_bucket.SelectedIndex != -1)
             {
                 list_bx_world_visited.Items.Add(list_bx_world_bucket.SelectedValue);
+
                 list_bx_travel_history.Items.Add(list_bx_world_bucket.SelectedValue + " - Visited: " + dateVisited.ToString("dd/MM/yyyy"));
                 list_bx_world_bucket.Items.Remove(list_bx_world_bucket.SelectedValue);
             }
@@ -174,6 +180,8 @@ namespace Time_Travel
                 MessageBox.Show("Please select a country you've visited!", "Attention!");
             }
         }
+        #endregion //Working with dates and time
+
         private void bucket_add_Click(object sender, RoutedEventArgs e) //Add countries to the bucket list from all countries list
         {
             if (string.IsNullOrEmpty(country_visited_input.Text))
@@ -187,25 +195,38 @@ namespace Time_Travel
                 country_visited_input.Focus();
             }
         }
+        #endregion
+
+        #region Exception handling
         private void bucket_remove_Click(object sender, RoutedEventArgs e) //Add countries back to the all countries from the bucket WITH example of exception handing and prevention
         {
             //Below his try catch prevents the application from crashing. If it is removed and you have items in the bucket list and click remove without selecting something
             //within the bucket list, the application will crash. Comment out the try catch to see the application crash.
             try
             {
-              if (list_bx_world_bucket.Items.Count > 0)
-              {
-                  list_bx_world_bucket.Items.RemoveAt(list_bx_world_bucket.SelectedIndex);
-              }
+                if (list_bx_world_bucket.Items.Count > 0)
+                {
+                    list_bx_world_bucket.Items.RemoveAt(list_bx_world_bucket.SelectedIndex);
+                }
 
-              else
-              {
-                  MessageBox.Show("Please select an country to remove!", "Attention!");
-              }
+                else
+                {
+                    MessageBox.Show("Please select an country to remove!", "Attention!");
+                }
             }
             catch
             {
-                MessageBox.Show("Please select an country to remove!", "Attention!");
+                MessageBox.Show("This is an example of exception handling. If you see this the program should have crashed but try/catch block caught it.", "Exception handling!");
+            }
+        }
+
+        private void list_bx_world_visited_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            countryVisited selectedVisited = list_bx_world_visited.SelectedItem as countryVisited;
+
+            if (selectedVisited != null)
+            {
+               
             }
         }
         #endregion
