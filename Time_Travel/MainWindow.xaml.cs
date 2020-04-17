@@ -187,13 +187,23 @@ namespace Time_Travel
                 country_visited_input.Focus();
             }
         }
-        private void bucket_remove_Click(object sender, RoutedEventArgs e) //Add countries back to the all countries from the bucket
+        private void bucket_remove_Click(object sender, RoutedEventArgs e) //Add countries back to the all countries from the bucket WITH example of exception handing and prevention
         {
-            if (list_bx_world_bucket.Items.Count > 0)
+            //Below his try catch prevents the application from crashing. If it is removed and you have items in the bucket list and click remove without selecting something
+            //within the bucket list, the application will crash. Comment out the try catch to see the application crash.
+            try
             {
-                list_bx_world_bucket.Items.RemoveAt(list_bx_world_bucket.SelectedIndex);
+              if (list_bx_world_bucket.Items.Count > 0)
+              {
+                  list_bx_world_bucket.Items.RemoveAt(list_bx_world_bucket.SelectedIndex);
+              }
+
+              else
+              {
+                  MessageBox.Show("Please select an country to remove!", "Attention!");
+              }
             }
-            else
+            catch
             {
                 MessageBox.Show("Please select an country to remove!", "Attention!");
             }
