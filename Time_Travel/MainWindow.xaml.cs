@@ -26,7 +26,6 @@ namespace Time_Travel
         List<Country> allCountries = new List<Country>(); //List of countries to reference spelling in the main tab
         List<countryVisited> visited = new List<countryVisited>(); //list of countries visited
         public int visitedCounter = 0; //keeps track of the amount of times a country was visited
-        private static Random random = new Random(); //gets the random letter for the random button
 
         public MainWindow()
         {
@@ -248,7 +247,9 @@ namespace Time_Travel
                 MessageBox.Show("Please add a country you've visited to add notes!", "Attention!");
             }
         }
+        #endregion
 
+        #region Additional Buttons and Features ( Random button and clear button)
         private void clear_Click(object sender, RoutedEventArgs e) //Clear all content in the boxes
         {
             string input = Interaction.InputBox("Are you sure you wish to delete travel history? Type YES or NO below. This CANNOT be undone", "WARNING", "", -1, -1);
