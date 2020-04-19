@@ -29,7 +29,7 @@ namespace Time_Travel
             return $"{CountryID}";
         }
 
-        //Comapring the names of te countries to sort them by name
+        //Comapring the names of the countries to sort them by name
         public int CompareTo(Country other)
         {
             return CountryID.CompareTo(other.CountryID);

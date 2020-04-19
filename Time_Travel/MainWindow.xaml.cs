@@ -24,11 +24,13 @@ namespace Time_Travel
     {
         CountryData db = new CountryData(); //My custom world countries database I created
         List<Country> allCountries = new List<Country>(); //List of countries to reference spelling in the main tab
+        List<countryVisited> visited = new List<countryVisited>();
         public int visitedCounter = 0;
 
         public MainWindow()
         {
             InitializeComponent();
+            RefreshScreens();
         }
  
         private void Window_Loaded(object sender, RoutedEventArgs e) //Massive region containing all country lists
@@ -148,13 +150,26 @@ namespace Time_Travel
         private void bucket_edit_Click(object sender, RoutedEventArgs e) //used when clicked on the button to edit the explored tab
         {
             countryVisited selectedVisited = list_bx_world_visited.SelectedItem as countryVisited;
-
             var dateAndTime = DateTime.Now; //Getting the date and time
+            
 
-            if (list_bx_world_visited.Items.Count > 0)
+            if (selectedVisited != null)
             {
-               string input = Interaction.InputBox("Enter notes about your visit to this country?", "Notes", "", -1, -1);
-               selectedVisited.countryNotes = "Notes: " + input + "\nDated: " + dateAndTime;
+                if (selectedVisited.countryNotes == "Custom notes on countries you wish visit will be shown here")
+                {
+                    selectedVisited.countryNotes = null;
+                    string input = Interaction.InputBox("Enter notes about your visit to this country?", "Notes", "", -1, -1);
+                    string note = "Notes: " + input + "\nDated: " + dateAndTime + "\nTime Visited: " + visitedCounter + "\n\n";
+                    selectedVisited.countryNotes = note;
+                }
+
+                else
+                {
+                    string input = Interaction.InputBox("Enter notes about your visit to this country?", "Notes", "", -1, -1);
+                    string appendednote = "Notes: " + input + "\nDated: " + dateAndTime + "\nTime Visited: " + visitedCounter + "\n\n";
+                    selectedVisited.countryNotes = selectedVisited.countryNotes + appendednote;
+                }
+                
             }
             else
             {
@@ -182,15 +197,18 @@ namespace Time_Travel
         }
         #endregion //Working with dates and time
 
-        private void bucket_add_Click(object sender, RoutedEventArgs e) //Add countries to the bucket list from all countries list
+        private void bucket_add_Click(object sender, RoutedEventArgs e) //Add countries to the bucket list from text box input
         {
+            string countryName = country_visited_input.Text;
             if (string.IsNullOrEmpty(country_visited_input.Text))
             {
                 MessageBox.Show("Please enter a country to add to bucketlist!", "Attention!");
             }
             else
             {
-                list_bx_world_bucket.Items.Add(country_visited_input.Text);
+                visitedCounter = +1;
+                countryVisited visted = new countryVisited(countryName, "Custom notes on countries you wish visit will be shown here", 0);
+                list_bx_world_bucket.Items.Add(visted);
                 country_visited_input.Clear();
                 country_visited_input.Focus();
             }
@@ -208,7 +226,6 @@ namespace Time_Travel
                 {
                     list_bx_world_bucket.Items.RemoveAt(list_bx_world_bucket.SelectedIndex);
                 }
-
                 else
                 {
                     MessageBox.Show("Please select an country to remove!", "Attention!");
@@ -220,13 +237,17 @@ namespace Time_Travel
             }
         }
 
-        private void list_bx_world_visited_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void list_bx_world_visited_SelectionChanged(object sender, SelectionChangedEventArgs e) //displays the notes for each country visited when selected in the list
         {
             countryVisited selectedVisited = list_bx_world_visited.SelectedItem as countryVisited;
 
             if (selectedVisited != null)
             {
-               
+                txtBlk_notes.Text = selectedVisited.countryNotes;
+            }
+            else
+            {
+                MessageBox.Show("Please add a country you've visited to add notes!", "Attention!");
             }
         }
         #endregion
