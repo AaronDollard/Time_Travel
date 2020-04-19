@@ -38,6 +38,7 @@
                 <TextBox    x:Name="country_visited_input"                Grid.Row="3"                       Height="20"                Margin="37,131,37,0"   Text=""     VerticalAlignment="Top" Grid.Column="1" Background="#f3fceb" />
                 <Button     Grid.Row="3"    Grid.ColumnSpan="3"           x:Name="bucket_add"                VerticalAlignment="Bottom" Content="Wishlist"     Height="20"         Click="bucket_add_Click" Width="80"/>
                 <Button     Grid.Row="5"    Grid.ColumnSpan="3"           x:Name="bucket_remove"             VerticalAlignment="Top"    Content="Remove"       Height="20"         Width="80"               Click="bucket_remove_Click"/>
+                <Button     Grid.Row="6"    Grid.ColumnSpan="3"           x:Name="btn_random"             VerticalAlignment="Top"    Content="Random Country"       Height="20"         Width="100" Click="btn_random_Click"/>
                 <TextBlock  Grid.Row="3"    HorizontalAlignment="Center"  TextWrapping="Wrap"                Text="Enter name of country to wishlist:" Width="195" Grid.Column="1" Margin="69,109,65,58"/>
                 <TextBlock  Grid.Column="2" Grid.Row="2"                  HorizontalAlignment="Center"       Height="14"                TextWrapping="Wrap"    Text="Countries Wishlist"                    Width="135"/>
                 <TextBlock  Grid.Row="0"    HorizontalAlignment="Left"    Height="14"                        TextWrapping="Wrap"        Text="Filter"          Width="30"                                   Margin="44,4,0,4"/>
