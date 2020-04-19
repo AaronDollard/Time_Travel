@@ -75,7 +75,8 @@
                 <ListBox  Grid.Column="0" Grid.Row="3" Grid.RowSpan="4" x:Name="list_bx_world_visited" Width="240" Background="azure" SelectionChanged="list_bx_world_visited_SelectionChanged"/>
                 <Button Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right" x:Name="bucket_edit" Content="Edit" Height="18" Width="64" Margin="0,6,45,5" Click="bucket_edit_Click"/>
                 <TextBlock Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" Height="14" TextWrapping="Wrap" Text="Travel History" Width="135"/>
-                <ListBox  Grid.Column="1" Grid.Row="3" Grid.RowSpan="2" x:Name="list_bx_travel_history" Width="240" Background="azure"/>
+                <ListBox Grid.Column="1" Grid.Row="3" Grid.RowSpan="2" x:Name="list_bx_travel_history" Width="240" Background="azure"/>
+                <Button Grid.Row="6" Grid.ColumnSpan="3" x:Name="clear" VerticalAlignment="Top" Content="Clear All" Height="20" Width="80" Click="clear_Click"/>
                 <TextBlock x:Name="txtBlk_notes" Grid.Column="2" Grid.Row="3" Grid.RowSpan="4" Text="Custom notes on countries you wish visit will be shown here." Background="azure" Padding="10" TextWrapping="Wrap" Width="237"/>
             </Grid>
         </TabItem>

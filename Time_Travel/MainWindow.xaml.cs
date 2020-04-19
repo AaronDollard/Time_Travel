@@ -151,8 +151,6 @@ namespace Time_Travel
         {
             countryVisited selectedVisited = list_bx_world_visited.SelectedItem as countryVisited;
             var dateAndTime = DateTime.Now; //Getting the date and time
-            
-
             if (selectedVisited != null)
             {
                 if (selectedVisited.countryNotes == "Custom notes on countries you wish visit will be shown here")
@@ -169,7 +167,6 @@ namespace Time_Travel
                     string appendednote = "Notes: " + input + "\nDated: " + dateAndTime + "\nTime Visited: " + visitedCounter + "\n\n";
                     selectedVisited.countryNotes = selectedVisited.countryNotes + appendednote;
                 }
-                
             }
             else
             {
@@ -249,6 +246,31 @@ namespace Time_Travel
             {
                 MessageBox.Show("Please add a country you've visited to add notes!", "Attention!");
             }
+        }
+
+        private void clear_Click(object sender, RoutedEventArgs e) //Clear all content in the boxes
+        {
+            string input = Interaction.InputBox("Are you sure you wish to delete travel history? Type YES or NO below. This CANNOT be undone", "WARNING", "", -1, -1);
+
+            while (input != "YES" && input != "NO")
+            {
+                input = Interaction.InputBox("Are you sure you wish to delete travel history? Type YES or NO below. This CANNOT be undone", "WARNING", "", -1, -1);
+
+                if (input == "YES")
+                {
+                    list_bx_travel_history.Items.Clear();
+                    list_bx_world_visited.Items.Clear();
+                    MessageBox.Show("Travel history has been cleared", "Attention!");
+                }
+                else if (input == "NO")
+                {
+                    MessageBox.Show("Clearing aborted", "Aborted!");
+                }
+                else
+                {
+                    MessageBox.Show("Invalid reply. Type YES or NO", "Invalid!");
+                }
+            } 
         }
         #endregion
 
