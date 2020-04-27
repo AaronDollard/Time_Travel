@@ -163,8 +163,9 @@ namespace Time_Travel
 
                 else
                 {
+                    selectedVisited.visitedCounter = selectedVisited.visitedCounter+1;
                     string input = Interaction.InputBox("Enter notes about your visit to this country?", "Notes", "", -1, -1);
-                    string appendednote = "Notes: " + input + "\nDated: " + dateAndTime + "\nTime Visited: " + visitedCounter + "\n\n";
+                    string appendednote = "Entry: #"+ selectedVisited.visitedCounter + "\nNotes: " + input + "\nDated: " + dateAndTime + "\nTime Visited: " + visitedCounter + "\n\n";
                     selectedVisited.countryNotes = selectedVisited.countryNotes + appendednote;
                 }
             }
@@ -193,7 +194,7 @@ namespace Time_Travel
             }
         }
         #endregion //Working with dates and time
-
+        
         private void bucket_add_Click(object sender, RoutedEventArgs e) //Add countries to the bucket list from text box input
         {
             string countryName = country_visited_input.Text;
@@ -211,7 +212,7 @@ namespace Time_Travel
             }
         }
         #endregion
-
+        
         #region Exception handling
         private void bucket_remove_Click(object sender, RoutedEventArgs e) //Add countries back to the all countries from the bucket WITH example of exception handing and prevention
         {
