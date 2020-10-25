@@ -2,6 +2,7 @@
 As of 25/10/2020 I will be coming back to this in the future to potentaially fix issues I know currently exist.
 
 ####### KNOWN ISSUES #######
+
 Can not click and add country directly from the country list
 
 Can not change amount of times visited a country manually.
